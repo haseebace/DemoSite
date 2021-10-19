@@ -1,1 +1,79 @@
-<html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="main.js"></script>
+    <title>Document</title>
+</head>
+<header>
+    <container class="main-menu">
+        <h3 class="logo">Mosh</h3>
+        <ul class="main">
+            <li class="menu">Home</li>
+            <li class="menu">Searvices</li>
+            <li class="menu">About Us</li>
+            <li class="menu">Contact Us</li>
+            <li class="menu">Blog</li>
+        </ul>
+    </container>
+</header>
+<body>
+
+    <div class="container">
+
+        <ul class="tabs">
+            <li class="tab-link current" data-tab="tab-1">Sign In</li>
+            <li class="tab-link" data-tab="tab-2">Sign Up</li>
+        </ul>
+    
+        <div id="tab-1" class="tab-content current">
+    <container class="main-container">
+            <section class="details">
+                <row class="first">
+                <div class="card">
+                    <h1 class="main-heading">Build your future in tech</h1>
+                    <div class="login">
+                        <lable>Email</lable>
+                        <input for="email" name="email" type="email" aria-invalid="true" aria-required="true" id="email" class="email-field">
+                        <lable>password</lable>
+                        <input for="password" name="password" type="password" aria-invalid="true" aria-required="true" id="password" class="password-field">
+                    </div>
+                    <div class="buttons">
+                        <button class=".signin-btn" type="submit" role="button">Login</button>
+                        <button class="signup-btn" type="submit" role="button">Sing Up</button>
+                    </div>
+                    
+                    <h6 class="forget">Forget password ></h6>
+                </div>
+                    
+                </row>
+            </section>
+        </container>
+        </div>
+        <div id="tab-2" class="tab-content">
+             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+    
+    </div>
+
+</body>
+<script>
+    $(document).ready(function(){
+
+$('ul.tabs li').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('ul.tabs li').removeClass('current');
+    $('.tab-content').removeClass('current');
+
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+})
+
+})
+</script>
+</html>
