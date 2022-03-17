@@ -31,7 +31,7 @@
 }
 h2 {
   font-size: 22px;
-  font-weight: 400px;
+  font-weight: 800;
   margin: 20px 0px;
 }
 
@@ -50,7 +50,7 @@ i
 .price {
   color: rgba(0, 183, 255, 0.75);
   font-size: 32px;
-  font-weight: 400px;
+  font-weight: 400;
   margin: -10px 0px 10px 0px;
 }
 
@@ -82,4 +82,20 @@ i
   color: rgb(0, 183, 255);
   background-color: transparent;
   border: 2px solid rgb(0, 183, 255);
+}
+/* <------------Responsive------------> */
+
+@media only screen and (max-width: 768px) {
+  p {
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
+  .btn-buy {
+    margin-bottom: 50px;
+  }
+  .container {
+    display: block !important;
+
+    width: 100%;
+  }
 }
